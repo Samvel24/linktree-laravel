@@ -46,7 +46,13 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('welcome');
+        /* Con load() se cargaran los enlaces (links) de forma diferida y de manera automática en el objeto usuario ($user) antes de pasarlo a la vista.
+           Esto ayuda a evitar que se realice una consulta SQL secundaria en el ciclo forach de la vista users.show ($user->links)
+           Ver: https://laravel.com/api/7.x/Illuminate/Database/Eloquent/Model.html#method_load
+        */
+        $user->load('links');
+
+        return view('users.show', ['user' => $user]);
     }
 
     /**

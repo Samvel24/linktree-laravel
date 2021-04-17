@@ -38,5 +38,3 @@ Route::get('/visit/{link}', 'VisitController@store');
 // Mostrar lista de enlaces del usuario: linktree.samuel.localhost/username
 Route::get('/{user}', 'UserController@show');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
