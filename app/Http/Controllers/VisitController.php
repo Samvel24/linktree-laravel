@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Link;
+use App\Visit;
 
 class VisitController extends Controller
 {
@@ -32,7 +34,7 @@ class VisitController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Link $link)
     {
         //
     }

@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function() {
 });
 
 // Registrar visitas a los enlaces para que el usuario pueda ver cuando un visitante haga clic en uno
-Route::get('/visit/{link}', 'UserController@store');
+Route::get('/visit/{link}', 'VisitController@store');
 
 // Mostrar lista de enlaces del usuario: linktree.samuel.localhost/username
 Route::get('/{user}', 'UserController@show');
