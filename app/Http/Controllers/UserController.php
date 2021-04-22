@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class UserController extends Controller
 {
@@ -41,8 +42,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  App\User $user
      */
     public function show(User $user)
     {
@@ -55,27 +55,27 @@ class UserController extends Controller
         return view('users.show', ['user' => $user]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit()
     {
-        //
+        return view('users.edit', ['user' => Auth::user()]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
     {
-        //
+        $request->validate([
+            'background_color' => 'required|size:7|starts_with:#',
+            'text_color' => 'required|size:7|starts_with:#'
+        ]);
+
+        Auth::user()->update($request->only(['background_color', 'text_color']));
+
+        return redirect()->back()
+            ->with(['success' => '¡Cambios guardados exitosamente!']); // with() toma una matriz de valores y la coloca en la sesión
     }
 
     /**
