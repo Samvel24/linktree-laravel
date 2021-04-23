@@ -21,8 +21,8 @@
                                 <tr>
                                     <td>{{ $link->name }}</td>
                                     <td><a href="{{ $link->link }}">{{ $link->link }}</a></td>
-                                    <td>0</td>
-                                    <td>10 Abr, 2021 - 12:16 p.m.</td>
+                                    <td>{{ $link->visits_count }}</td>
+                                    <td>{{ $link->latest_visit ? $link->latest_visit->created_at->format('M j Y - H:ia') : 'N/A' }}</td>
                                     <td><a href="/dashboard/links/{{ $link->id }}">Edit</a></td>
                                 </tr>
                             @endforeach

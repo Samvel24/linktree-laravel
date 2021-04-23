@@ -17,4 +17,10 @@ class Link extends Model
     {
         return $this->hasMany(Visit::class); // un link tiene muchas visitas
     }
+
+    public function latest_visit()
+    {
+        // Lo siguiente permite obtener la relación asociada mas nueva para la fecha del campo created_at
+        return $this->hasOne(Visit::class)->latest();
+    }
 }
