@@ -20,3 +20,11 @@
         </div>
     </div>
 @endsection
+
+@section('home')
+    <div class="content">
+        <a style="color: {{ $user->text_color }}" href="{{ url('/') }}">
+            <p class="text-center">Home</p>
+        </a>
+    </div>
+@endsection
