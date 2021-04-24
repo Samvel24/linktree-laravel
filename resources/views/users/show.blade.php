@@ -10,7 +10,8 @@
                             style="border: 2px solid {{ $user->text_color }}; color: {{ $user->text_color }}"
                             href="{{ $link->link }}"  
                             target="_blank"
-                            rel="nofollow">
+                            rel="nofollow"
+                            data-link-id="{{ $link->id }}">
                             {{ $link->name }}
                         </a>
                     </div>
