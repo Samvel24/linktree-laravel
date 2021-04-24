@@ -22,6 +22,7 @@
 <body style="background: {{ $user->background_color }}">
     <div id="app">
         @yield('content')
+        @yield('home')
     </div>
 </body>
 </html>
