@@ -10,8 +10,9 @@ Clon de Linkree creado con el framework Laravel (Con ayuda del tutorial: https:/
 	1. Apache/2.4.33 or greater.
 	2. MariaDB 10.1.32 or greater.
 	3. PHP/7.2.5 or greater.
-    See [XAMPP 7.2.5 readme file](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2.5/)
-    See [Laravel installation](https://laravel.com/docs/7.x/installation)
+    4. To verify these requirements see:
+        * [XAMPP readme file](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2.5/) and 
+        * [Laravel installation](https://laravel.com/docs/7.x/installation)
   
 * App Configuration
     1. Add host `linktree.samuel.localhost`,
@@ -21,7 +22,7 @@ Clon de Linkree creado con el framework Laravel (Con ayuda del tutorial: https:/
     4. Set `DB_DATABASE=root_linktree` at `.env`.     	
 	5. Run `composer install`.
 	6. Run `php artisan migrate`.
-    7. Run `npm install` [for install NPM dependencies like Vue, Axios, jQuery, etc](https://laravel.com/docs/7.x/)mix#installation).
+    7. Run `npm install` [for install NPM dependencies like Vue, Axios, jQuery, etc](https://laravel.com/docs/7.x/mix#installation).
     8. Run `npm run dev` (for buil NPM dependencies)
 
 
