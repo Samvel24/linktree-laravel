@@ -1,8 +1,6 @@
 # Linktree clone
  
-version: 1.0.3
- 
-Clon de Linkree creado con el framework Laravel (Con ayuda del tutorial: https://www.youtube.com/watch?v=30qk04BG9G4)
+Linktree clone created with the Laravel framework (With the help of the tutorial: https://www.youtube.com/watch?v=30qk04BG9G4)
  
  
 ### SET UP
@@ -16,24 +14,21 @@ Clon de Linkree creado con el framework Laravel (Con ayuda del tutorial: https:/
   
 * App Configuration
     1. Add host `linktree.samuel.localhost`,
-        	see [Edit hosts](https://dinahosting.com/ayuda/como-modificar-el-fichero-hosts).        	
+        see [Edit hosts](https://dinahosting.com/ayuda/como-modificar-el-fichero-hosts).
     2. Create `.env` file from `.env.example` and set it.
-    3. Set `DB_DATABASE=root_linktree` at `.env`.     	
-    4. Run `php artisan key:generate` to get an application key in .env file
+    3. Set `DB_DATABASE=root_linktree` in `.env` file.
+    4. Run `php artisan key:generate` to get an application key in `.env` file.
 	5. Run `composer install`.
 	6. Run `php artisan migrate`.
-    7. Run `npm install` [for install NPM dependencies like Vue, Axios, jQuery, etc](https://laravel.com/docs/7.x mix#installation).
+    7. Run `npm install` [(for install NPM dependencies like Vue, Axios, jQuery, etc)](https://laravel.com/docs/7.x/mix#installation).
     8. Run `npm run dev` (for buil NPM dependencies)
 
 
-* App Settings 
-* Browse at [linktree.samuel.localhost](http://linktree.samuel.localhost).
-
-* Login at [linktree.samuel.localhost/login](http://linktree.samuel.localhost/login).
- 
-* Register at [linktree.samuel.localhost/register](http://linktree.samuel.localhost/register).
-
-* See user links [linktree.samuel.localhost/{username}](http://linktree.samuel.localhost/{username}).
+* App sections
+    1. Browse the website [linktree.samuel.localhost](http://linktree.samuel.localhost).
+    2. Login at [linktree.samuel.localhost/login](http://linktree.samuel.localhost/login).
+    3. Register at [linktree.samuel.localhost/register](http://linktree.samuel.localhost/register).
+    4. See a user's links at [linktree.samuel.localhost/{username}](http://linktree.samuel.localhost/{username}).
  
 ### CONTRIBUTION: Guidelines & Documentation
 * Git :
